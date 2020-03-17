@@ -56,6 +56,12 @@ Once you've completed building and testing your map module, you may either integ
 
 If you wish to make your module publicly available, we recommend offering both a pre-compiled Javascript file users can include on their web pages and publishing a public NPM module users can install as a dependency in their own Javascript projects. These are the same methods we offer with our own [Aeris Javascript SDK](https://www.aerisweather.com/support/docs/toolkits/aeris-js-sdk/getting-started/#script-usage-vs-npm-module).
 
+Running the following command from the root of the project directory will build your module for both NPM and precompiled distribution methods as described below. The compiled result will be located in the `/dist` directory:
+
+```bash
+yarn build
+```
+
 ### Publishing an NPM module
 
 Publishing your map module to NPM as a public package allows other users to install and integrate your module into their own map applications. To publish your map module to NPM, [review the NPM guides on contributing](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) to the NPM registry.

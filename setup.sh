@@ -103,7 +103,7 @@ cat > package.json <<EOF
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "@aerisweather/javascript-sdk": "@aerisweather/javascript-sdk"
+    "@aerisweather/javascript-sdk": "^1.3.0"
   }
 }
 EOF
@@ -308,6 +308,9 @@ window.addEventListener('load', () => {
 </body>
 </html>
 EOF
+
+# remove git-related files for this directory
+rm -fr .git
 
 yarn install
 
