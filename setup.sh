@@ -103,7 +103,7 @@ cat > package.json <<EOF
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "@aerisweather/javascript-sdk": "../aeris-js-core"
+    "@aerisweather/javascript-sdk": "@aerisweather/javascript-sdk"
   }
 }
 EOF
@@ -312,7 +312,7 @@ EOF
 yarn install
 
 step "Done setting up your module project!"
-read -p "Do you want to startup the development server (y/n)? [n]: " START_DEV_SERVER
+read -p "Do you want to startup the development server (y/n)? [y]: " START_DEV_SERVER
 
 if [[ "${START_DEV_SERVER}" = "Y" || "${START_DEV_SERVER}" = "y" ]]; then
     yarn dev-server

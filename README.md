@@ -20,8 +20,10 @@ Before getting started, you'll need to setup your module project:
 1. Add any other dependencies your module project may require using `yarn add` or `npm install`.
 1. If you didn't provide your Aeris account keys during setup, you will need to add your Aeris account access keys to the project environment file at `/.env` to use while developing and testing locally:
 
-	```html
-	const aeris = new AerisWeather('CLIENT_ID', 'CLIENT_SECRET');
+	```
+	# Account ID and secret for interacting with the Aeris API
+   AERIS_CLIENT_ID=
+   AERIS_CLIENT_SECRET=
 	```
 	
 	Note that this environment file containing your Aeris access keys will **not** be included with your package or Git repository if you choose to publish an NPM module.
