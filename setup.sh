@@ -270,8 +270,8 @@ cat > ./public/template.html <<EOF
     }
     </style>
 
-    <script src="https://cdn.aerisapi.com/sdk/js/1.3.0/aerisweather.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.aerisapi.com/sdk/js/1.3.0/aerisweather.css">
+    <script src="https://cdn.aerisapi.com/sdk/js/latest/aerisweather.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.aerisapi.com/sdk/js/latest/aerisweather.css">
 
 </head>
 <body>
