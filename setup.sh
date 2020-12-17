@@ -71,7 +71,8 @@ cat > package.json <<EOF
     "build:prod": "NODE_ENV='production' webpack -p --env production",
     "build": "yarn build:js; yarn build:prod; rm dist/index.html",
     "publish": "yarn build:js; npm publish",
-    "dev-server": "NODE_ENV='development' webpack-dev-server"
+    "develop": "NODE_ENV='development' webpack-dev-server",
+    "dev-server": "yarn develop"
   },
   "files": [
     "/dist",
@@ -203,7 +204,7 @@ if [[ "${HAS_GROUP}" = "Y" || "${HAS_GROUP}" = "y" ]]; then
 step "Creating module group file at src/${GROUP_NAME}.ts..."
 cat > "src/${GROUP_NAME}.ts" <<EOF
 import ModuleGroup from '@aerisweather/javascript-sdk/dist/modules/ModuleGroup';
-import { IMapSourceModule } from '@aerisweather/javascript-sdk/dist/modules/interfaces/IMapSourceModule';
+import IMapSourceModule from '@aerisweather/javascript-sdk/dist/modules/interfaces/IMapSourceModule';
 import ${MODULE_NAME} from './${MODULE_NAME}';
 
 class ${GROUP_NAME} extends ModuleGroup {
