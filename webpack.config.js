@@ -66,7 +66,7 @@ module.exports = () => {
 			path: path.join(__dirname, 'dist'),
 			publicPath: './dist/',
 			filename: IS_PROD ? `${outputFileName}.min.js` : `${outputFileName}.js`,
-			chunkFilename: `${MODULE_NAME}.js`,
+			chunkFilename: '[name].js',
 			library: [MODULE_NAME],
 			libraryExport: 'default',
 			libraryTarget: 'umd',
